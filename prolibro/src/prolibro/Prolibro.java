@@ -9,6 +9,7 @@ package prolibro;
  *
  * @author ja
  */
+import Util.Connexion;
 public class Prolibro {
 
     /**
@@ -16,6 +17,16 @@ public class Prolibro {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        conectar();
     }
-    
+    public static void conectar(){        
+        Connexion.getConexion();
+        if(Connexion.cx!=null){
+            System.out.println("SI");
+        }else{System.out.println("NO");}
+        Connexion.cerrar();
+        if(Connexion.cx!=null){
+            System.out.println("SI");
+        }else{System.out.println("NO");}
+    }
 }
